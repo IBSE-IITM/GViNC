@@ -1,2 +1,2 @@
 # GViNC
-Genome graph Visualisation, Navigation and Comparison framework
+Framework for Genome graph Visualisation, Navigation and Comparison 
