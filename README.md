@@ -9,7 +9,7 @@ Kindly execute the steps linearly and conserve the directory format. <br>
 **Creating and activating the conda environnment**
 
 The tools required for performing genome graph related analyses can be installed using conda [Install Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html). <br>
-To install all the tools in one go, create a conda environment using the yml file provied with this repo at ```envs/structure_gg.yaml```.
+To install all the tools in one go, create a conda environment using the yml file provied with this repo at ```envs/gvinc.yaml```.
 
 1) Create the conda virtual environment: 
 ```
@@ -43,9 +43,9 @@ The directory contains a portable Snakemake based workflow that can be used for 
 
 4) Optionally the parameters of the analysis (like the bin_width for subgraph creation, node_cutoff for invariance etc.) can also be altered in ```config/config.yaml```.
 
-5) Activate the ```structure_gg``` conda environment.
+5) Activate the ```gvinc``` conda environment.
 ```
-conda activate structure_gg
+conda activate gvinc
 ```
 
 6) Perform a Snakemake dry run to ensure that the workflow works.
