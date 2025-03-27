@@ -23,6 +23,8 @@ To verify if above step ran smoothly, run ```conda info --envs``` and check if `
 conda activate gvinc
 ```
 
+*Note: If conda throws channel a priority error, please edit the channel_priority parameter to be flexible. [Conda Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-channels.html)*
+
 <br>
 <br> 
 
@@ -60,13 +62,14 @@ snakemake --cores [integer]--jobs [integer] -p
 ```
 
 > Note: Edit the parameters accordingly <br>
-> --cores : Use at most N CPU cores/jobs in parallel
+> --cores : Use at most N CPU cores in parallel. <br>
 > --jobs : max number of jobs to be performed parallely. <br>
 > --use-conda: to enable conda through job scheduler <br>
 > *Optional parameters:* <br>
 > -p & -r: print the command and the reason to run the command
 > --forceall: Mandatorily run all the rules in the Snakefile <br>
 > --rerun-incomplete: If the analysis stops before completion, this parameter can be added to recreate any incomplete files. <br>
+> --scheduler greedy: If the default scheduler ILP, throws error, you can switch to greedy scheduler.
 
 
 Kindly look into [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/) for more details.
