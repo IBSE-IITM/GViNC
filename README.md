@@ -13,14 +13,14 @@ To install all the tools in one go, create a conda environment using the yml fil
 
 1) Create the conda virtual environment: 
 ```
-conda env create -f structure_gg.yaml
+conda env create -f gvinc.yaml
 ```
 
-To verify if above step ran smoothly, run ```conda info --envs``` and check if ```structure_gg``` gets listed. 
+To verify if above step ran smoothly, run ```conda info --envs``` and check if ```gvinc``` gets listed. 
 
 2) Activate the environment created: 
 ```
-conda activate structure_gg
+conda activate gvinc
 ```
 
 <br>

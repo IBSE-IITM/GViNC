@@ -48,7 +48,7 @@ rule construct_vg_files:
     output:
         "datasets/vg_files/{chromosome}.vg"
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/vg_construct/{chromosome}.log"
     threads: 25
@@ -71,7 +71,7 @@ rule construct_gfa_files:
     output:
         gfa_file="datasets/gfa_files/{chromosome}.gfa"
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/gfa_construct/{chromosome}.log"
     threads: 25
@@ -102,7 +102,7 @@ rule gg_structural_analysis:
         hypvar_output="datasets/chromosome_level_structural_analysis/hypervariable_nodes_summary/{chromosome}.tsv",
         invar_output="datasets/chromosome_level_structural_analysis/invariable_nodes_summary/{chromosome}.csv"
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/gg_structural_analysis/{chromosome}.log"
     threads: 25
@@ -137,7 +137,7 @@ rule collate_files:
         variability_color=config['Variability_Color'],
         hypvar_color=config['Hypervariability_Colour']
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/collate_files.log"
     threads: 25
@@ -170,7 +170,7 @@ rule visualise_genome_graph_metrics:
         invar_median_plot="datasets/genome_graph_visualisation/invariable_zones_median_length.png",
         invariability_plot="datasets/genome_graph_visualisation/invariable_zones_normalised_length.png"
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/visualise_genome_graph_metrics.log"
     threads: 25
@@ -195,7 +195,7 @@ rule visualise_genome_graph_circos:
     params:
         circos_plot="datasets/genome_graph_visualisation/complete_genome_graph_visualisation"
     conda:
-        "envs/structure_gg.yaml"
+        "envs/gvinc.yaml"
     log:
         "logs/visualise_genome_graph_circos.log"
     threads: 25
@@ -219,7 +219,7 @@ rule visualise_genome_graph_circos:
 #     output:
 #         xg_file="datasets/xg_files/{chromosome}.xg"
 #     #conda:
-#         #"envs/structure_gg.yaml"
+#         #"envs/gvinc.yaml"
 #     log:
 #         "logs/xg_index/{chromosome}.log"
 #     threads: 25
@@ -243,7 +243,7 @@ rule visualise_genome_graph_circos:
 #         mapping="datasets/vg_files/mapping",
 #         mapping_backup="datasets/vg_files/mapping.backup"
 #     #conda:
-#         #"envs/structure_gg.yaml"
+#         #"envs/gvinc.yaml"
 #     log:
 #         "logs/vg_construct/node_id_coordination.log"
 #     threads: 25
