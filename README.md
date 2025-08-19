@@ -69,7 +69,7 @@ snakemake --cores [integer]--jobs [integer] -p
 > -p & -r: print the command and the reason to run the command
 > --forceall: Mandatorily run all the rules in the Snakefile <br>
 > --rerun-incomplete: If the analysis stops before completion, this parameter can be added to recreate any incomplete files. <br><br><br>
-> When working with a single chromosome, it is possible to encounter an error at the collate_files rule. To overcome this issue, add --scheduler greedy
+> When working with a single chromosome, it is possible to encounter an error at the collate_files rule. To overcome this issue, add --scheduler greedy <br>
 > --scheduler greedy: If the default scheduler ILP, throws error, you can switch to greedy scheduler.
 
 
