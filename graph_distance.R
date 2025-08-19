@@ -55,14 +55,14 @@ chromosomes <- paste("chr", c(1:22, "X", "Y"), sep = "")
 chromosomes <- c("All", chromosomes)
 
 # Assing a 0 matrix for capturing the variability distance between all combinations of population specific genome graphs
-variability_distance_matrix <- matrix(rep(0,240), 
+variability_distance_matrix <- matrix(length(chromosomes)*length(population_combinations), 
                                       nrow = length(chromosomes), 
                                       ncol = length(population_combinations), 
                                       dimnames = list(chromosomes, population_combinations))
 
 
 # Assing a 0 matrix for capturing the variability correlation between all combinations of population specific genome graphs
-variability_correlation_matrix <- matrix(rep(0,240), 
+variability_correlation_matrix <- matrix(length(chromosomes)*length(population_combinations), 
                                       nrow = length(chromosomes), 
                                       ncol = length(population_combinations), 
                                       dimnames = list(chromosomes, population_combinations))
@@ -166,14 +166,14 @@ colnames(total_hypervariability) <- c("Chr", "Start", "End", "EUR", "AMR", "AFR"
 
 
 # Assing a 0 matrix for capturing the hypervariability distance between all combinations of population specific genome graphs
-hypervariability_distance_matrix <- matrix(rep(0,240), 
+hypervariability_distance_matrix <- matrix(length(chromosomes)*length(population_combinations), 
                                       nrow = length(chromosomes), 
                                       ncol = length(population_combinations), 
                                       dimnames = list(chromosomes, population_combinations))
 
 
 # Assing a 0 matrix for capturing the hypervariability correlation between all combinations of population specific genome graphs
-hypervariability_correlation_matrix <- matrix(rep(0,240), 
+hypervariability_correlation_matrix <- matrix(length(chromosomes)*length(population_combinations), 
                                       nrow = length(chromosomes), 
                                       ncol = length(population_combinations), 
                                       dimnames = list(chromosomes, population_combinations))
